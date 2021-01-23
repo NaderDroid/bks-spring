@@ -5,7 +5,7 @@ target/
 !**/src/test/**/target/
 
 ### ssl certificate ###
-*/ssl/
+ssl/
 
 ### STS ###
 .apt_generated
