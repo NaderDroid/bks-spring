@@ -1,5 +1,8 @@
 package self.study.booksapi.user;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class UserService {
     User user = null;
 
