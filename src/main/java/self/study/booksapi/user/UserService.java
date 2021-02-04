@@ -7,7 +7,7 @@ public class UserService {
     User user = null;
 
     public UserService() {
-        user = new User("ndroid" , "" , true);
+        user = new User("ndroid" , "123" , true);
     }
 
     public User getUserByUsername(String username){
