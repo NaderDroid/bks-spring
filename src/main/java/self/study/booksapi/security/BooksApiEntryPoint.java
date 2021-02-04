@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 @Component
@@ -15,16 +16,16 @@ public class BooksApiEntryPoint extends BasicAuthenticationEntryPoint {
 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
-                         AuthenticationException authException) throws java.io.IOException {
+                         AuthenticationException authException) throws IOException {
         response.addHeader("WWW-Authenticate", "Basic realm=\"" + getRealmName() + "\"");
         response.sendError(HttpStatus.UNAUTHORIZED.value(), HttpStatus.UNAUTHORIZED.getReasonPhrase());
         PrintWriter writer = response.getWriter();
-        writer.println("please use correct credentials to access the API");
+        writer.println("Nader, please use correct credentials to access the API");
     }
 
     @Override
     public void afterPropertiesSet() {
-        setRealmName("BasicRealm");
+        setRealmName("Nader'sRealm");
         super.afterPropertiesSet();
     }
 }
